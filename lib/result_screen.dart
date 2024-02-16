@@ -37,7 +37,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 colors: [
                   Colors.blue,
@@ -46,16 +46,16 @@ class _ResultScreenState extends State<ResultScreen> {
             )
         ),
         child: Container(
-          margin: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                margin: EdgeInsets.all(30),
+                margin: const EdgeInsets.all(30),
                 child: Text(
                     'You Answered ${numOfCorrectAnswer} out of ${questions.length} questions correctly',
-                  style: TextStyle(color: Colors.yellowAccent,fontSize: 20),
+                  style: const TextStyle(color: Colors.yellowAccent,fontSize: 20),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -77,23 +77,23 @@ class _ResultScreenState extends State<ResultScreen> {
                             children: [
                               Text(
                                   e['Question'].toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 5,),
+                              const SizedBox(height: 5,),
                               Text(
                                   e['Your Answer'].toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.purple,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 5,),
+                              const SizedBox(height: 5,),
                               Text(
                                   e['Correct Answer'].toString(),
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.green,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -105,18 +105,18 @@ class _ResultScreenState extends State<ResultScreen> {
 
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                 ],
               )),
               ElevatedButton.icon(
                   onPressed: (){
                     Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context)=>HomeScreen()),
+                        MaterialPageRoute(builder: (context)=>const HomeScreen()),
                     );
                   },
-                  icon: Icon(Icons.restart_alt),
-                  label: Text('Restart'),
+                  icon: const Icon(Icons.restart_alt),
+                  label: const Text('Restart'),
               )
             ],
           ),

@@ -8,7 +8,7 @@ import 'package:quiz_app/result_screen.dart';
 import 'data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
-   QuestionsScreen({super.key});
+   const QuestionsScreen({super.key});
 
   @override
   State<QuestionsScreen> createState() => _QuestionsScreenState();
@@ -41,7 +41,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     final currentQuestion=questions[currentQuestionIndex];
     return  Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               Colors.red,
@@ -54,16 +54,16 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             mainAxisSize:MainAxisSize.min,
             children: [
               Text(currentQuestion.questions,
-                style: TextStyle(
+                style: const TextStyle(
                 color: Colors.white,
                 fontSize: 20,
               ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               ...currentQuestion.getShuffledAnswers().map((e){
                 return Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: AnswerButton(
                     answerText: e,
                     onPressed: ()=> answerQuestion(e),

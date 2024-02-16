@@ -25,15 +25,15 @@ class HomeScreen extends StatelessWidget {
                 width: 300,
                 color: Colors.white.withOpacity(.65),
               ),
-              SizedBox(height: 50,),
-              Text(
+              const SizedBox(height: 50,),
+              const Text(
                   'Learn Flutter',
                 style: TextStyle(
                   fontSize: 30,
                   color: Colors.white
                 ),
               ),
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
               OutlinedButton.icon(
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 label: const Text('Start Quiz'),
-                icon: Icon(Icons.arrow_right_alt_outlined),
+                icon: const Icon(Icons.arrow_right_alt_outlined),
               ),
             ],
           ),
